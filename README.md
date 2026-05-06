@@ -55,7 +55,7 @@ MyDrive/
 ### Model Weights
 Pre-trained checkpoints (best_ckpt, phase2_ep1/2/3) are available at:
 
-> **[Google Drive — Model Weights](YOUR_DRIVE_LINK_HERE)**
+> **[Google Drive — Model Weights](https://drive.google.com/drive/folders/1NLbOYkJJdUUgHKa-3ElkfFPFU4rEw0tZ?usp=sharing)**
 
 Place them at `MyDrive/smolvlm_competition/` before running inference-only mode.
 
