@@ -88,9 +88,9 @@ accelerate==1.6.0
 ## Repository Structure
 
 ```
-├── solution_colab_version3.ipynb   # Final notebook (V3, score 0.74044)
-├── solution_colab_version2_finish.ipynb  # V2 (score 0.72434)
-├── solution_colab_first successful version.ipynb  # V1 baseline (score 0.70824)
+├── solution_v3_ensemble.ipynb      # Final notebook (V3, score 0.74044)
+├── solution_v2_384px_phase2.ipynb  # V2 (score 0.72434)
+├── solution_v1_baseline.ipynb      # V1 baseline (score 0.70824)
 ├── submission.csv                  # Final submission predictions
 └── README.md
 ```
