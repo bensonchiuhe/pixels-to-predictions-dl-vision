@@ -63,19 +63,24 @@ Place them at `MyDrive/smolvlm_competition/` before running inference-only mode.
 
 ## How to Run
 
-Open `solution_colab_version3.ipynb` in Google Colab with a T4 GPU runtime.
+Open `solution_v3_ensemble.ipynb` in Google Colab with a **T4 GPU** runtime (Runtime → Change runtime type → T4 GPU).
 
-### Full Training + Inference (from scratch, ~4 hours)
-Run all cells in order: **Cell 0 → Cell 12**
+### Full Training + Inference (from scratch, ~8–10 hours)
 
-### Inference Only (using provided weights)
-1. Download model weights from the Drive link above → place at `MyDrive/smolvlm_competition/`
-2. Run **Cell 0–8** (setup)
-3. Skip Cell 9 (Phase 1 training) and Cell 10 (Phase 2 training)
-4. Run **Cell 11** (ensemble inference, ~32 min) → generates `submission.csv`
-5. Run **Cell 12** (download)
+Run all cells from top to bottom in order.
 
-### Package Versions (auto-installed in Cell 1)
+### Inference Only (using provided weights, ~32 min)
+
+1. Download model weights from the Drive link above → place the folder at `MyDrive/smolvlm_competition/`  
+   (you should have subfolders: `best_ckpt/`, `phase2_ep1/`, `phase2_ep2/`, `phase2_ep3/`)
+2. Run the **Setup** cells — Drive mount, install packages, copy data, imports, config, dataset/model loading, and inference helpers (everything before the Phase 1 training loop)
+3. **Skip** the Phase 1 training cell, the Phase 2 warm-start cell
+4. Run the **Ensemble Inference** cell — loads the 4 checkpoints from Drive and generates `submission.csv`
+5. Run the **Download** cell to retrieve `submission.csv` locally
+
+**Expected output**: `submission.csv` with 1,008 predictions, achieving public leaderboard accuracy of **0.74044** (V3 ensemble, final submission).
+
+### Package Versions (auto-installed at the top of the notebook)
 ```
 transformers==4.51.3
 peft==0.14.0
